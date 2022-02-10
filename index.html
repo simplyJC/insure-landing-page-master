@@ -10,31 +10,50 @@
       href="./images/favicon-32x32.png"
     />
     <title>Frontend Mentor | Insure landing page</title>
+    <link rel="stylesheet" href="dist/main.css" />
+    <script src="app/js/main.js" defer></script>
   </head>
   <body>
     <header class="header">
-      <a href="#"
-        ><img
-          src="/images/logo.svg"
-          alt="Page Logo"
-          aria-label="Go to Homepage"
-      /></a>
+      <div class="header__container-top">
+        <a href="#"
+          ><img
+            src="/images/logo.svg"
+            alt="Page Logo"
+            aria-label="Go to Homepage"
+        /></a>
+        <img
+          class="nav--open"
+          src="/images/icon-hamburger.svg"
+          alt="open navigation  "
+        />
+        <img
+          class="nav--close"
+          src="/images/icon-close.svg"
+          alt="close navigation"
+        />
+      </div>
       <nav class="nav">
-        <ul class="nav__list">
+        <ul class="nav__list" role="list">
+          <li class="nav__item">
+            <a class="nav__link" href="#">How we work </a>
+          </li>
           <li class="nav__item">
             <a class="nav__link" href="#">Blog</a>
           </li>
           <li class="nav__item">
             <a class="nav__link" href="#">Account</a>
           </li>
-          <li class="nav__item">
+          <li class="nav__item button">
             <a class="nav__link" href="#">View plans</a>
           </li>
         </ul>
       </nav>
-      <button><a class="nav__link" href="#">How we work</a></button>
     </header>
-    <section id="hero row">
+    <section id="hero row" class="hero">
+      <div class="column">
+        <img src="/images/image-intro-desktop.jpg" alt="image intro desktop" />
+      </div>
       <div class="column">
         <h1>Humanizing your insurance.</h1>
         <p>
@@ -43,9 +62,6 @@
           you. Ensure you and your loved ones are protected.
         </p>
         <button class="button">View plans</button>
-      </div>
-      <div class="column">
-        <img src="/images/image-intro-desktop.jpg" alt="image intro desktop" />
       </div>
     </section>
 
@@ -85,6 +101,13 @@
     </section>
 
     <footer id="footer" class="footer">
+      <img src="/images/logo.svg" alt="" />
+      <img src="/images/icon-facebook.svg" alt="facebook" />
+      <img src="/images/icon-twitter.svg" alt="twitter" />
+      <img src="/images/icon-pinterest.svg" alt="Pinterest" /><img
+        src="/images/icon-instagram.svg"
+        alt="instagram"
+      />
       <h4>Our company</h4>
       <ul>
         <li>

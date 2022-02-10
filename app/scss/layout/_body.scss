@@ -1,0 +1,6 @@
+@use '../base/' as *;
+body {
+  font-family: $ff-primary-karla;
+  font-size: 1rem;
+  min-height: 100vh;
+}

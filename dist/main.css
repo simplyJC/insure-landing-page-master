@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Karla:wght@400;700&display=swap");
 /* Box sizing rules */
 *,
 *::before,
@@ -75,20 +76,108 @@ select {
     scroll-behavior: auto !important;
   }
 }
-.container {
+/**
+### Body Copy
+
+- Font size: 16px
+
+### Headings
+
+- Family: [DM Serif Display](https://fonts.google.com/specimen/DM+Serif+Display)
+- Weights: 400
+
+### Body
+
+- Family: [Karla](https://fonts.google.com/specimen/Karla)
+- Weights: 400, 700
+*/
+/*## Colors
+
+### Primary
+
+- Dark Violet: hsl(256, 26%, 20%)
+- Grayish Blue: hsl(216, 30%, 68%)
+
+### Neutral
+
+- Very Dark Violet: hsl(270, 9%, 17%)
+- Dark Grayish Violet: hsl(273, 4%, 51%)
+- Very Light Gray: hsl(0, 0%, 98%)*/
+.header {
+  height: 0;
   width: 100%;
-  background: teal;
-  color: white;
-  padding: 2rem;
-  border-radius: 10px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+  background: #2d2640 url("/images/bg-pattern-mobile-nav.svg");
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-size: contain;
 }
-.container h1 {
+.header__container-top {
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1rem;
+  background: white;
+}
+
+.nav {
+  padding: 5rem 1rem 0 1rem;
+  text-align: center;
+  transition: 0.5s ease-in-out;
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 2rem;
+}
+.nav--open {
+  transition: 0.5s ease-in-out;
+}
+.nav--close {
+  display: none;
+  transition: 0.5s ease-in-out;
+}
+.nav__list {
+  padding-left: 0;
+}
+.nav__link {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  margin: 1rem 0;
+}
+.nav__item {
+  padding: 0.5rem 0;
+}
+
+.button {
+  border-style: none;
+  background: #2d2640;
+  border: 1px solid white;
+  margin: 1rem 0;
+}
+
+body {
+  font-family: "Karla", sans-serif;
+  font-size: 1rem;
+  min-height: 100vh;
+}
+
+.attribution {
+  font-size: 11px;
   text-align: center;
 }
 
-main {
-  display: grid;
-  align-items: center;
-  justify-items: center;
-  min-height: 100vh;
+.attribution a {
+  color: #3e52a3;
+}
+
+.hero {
+  padding: 6rem 1rem 1rem 1rem;
 }/*# sourceMappingURL=main.css.map */

@@ -1,14 +1,14 @@
-// @use 'sass:map';
-// @use 'variables' as *; 
+@use 'sass:map';
+@use 'variables' as *; 
 
 
-// @mixin media-query($key) {
-//   $size: map-get($breakpoints, $key);
+@mixin media-query($key) {
+  $size: map-get($breakpoints, $key);
 
-//   @media (min-width: $size) {
-//     @content;
-//   }
-// }
+  @media (min-width: $size) {
+    @content;
+  }
+}
 
 
 
