@@ -9,8 +9,12 @@
     font-family: $ff-primary-dm-serif;
     font-weight: 400;
     font-size: 3rem;
-    border-top: 1px solid black;
-    
+  }
+  &__line {
+    height: 1px;
+    width: 50%;
+    background-color: lighten($clr-neutral-grayish-violet, 20%);
+    margin: 0 auto;
   }
 
   &__icon {

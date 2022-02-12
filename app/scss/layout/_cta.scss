@@ -1,0 +1,25 @@
+@use '../abstracts/' as *;
+@use '../base/' as *;
+
+.cta {
+  border: 1px solid black;
+  background: url('/images/bg-pattern-how-we-work-mobile.svg') no-repeat right top, $clr-primary-dark-violet;
+  margin: 3rem 1rem;
+  color: white;
+  text-align: center;
+  padding: 4rem 1rem;
+  &__title {
+    font-family: $ff-primary-dm-serif;
+    font-size: 2.5rem;
+    display: block;
+    font-weight: 400;
+    line-height: 2.5rem;
+    padding: 1rem 0 ;
+  }
+  &__button{
+      color: white;
+      text-transform: uppercase;
+
+      padding: 0.3rem 1.5rem;
+  }
+}
