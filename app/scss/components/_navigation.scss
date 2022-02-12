@@ -7,12 +7,28 @@
   z-index: 1;
   top: 0;
   left: 0;
-  overflow: hidden;
-  transition: 0.5s ease-in-out;
-  background: $clr-primary-dark-violet url('/images/bg-pattern-mobile-nav.svg'); 
+
+ transition: 0.5s ease-in-out;
+  background: $clr-primary-dark-violet url('/images/bg-pattern-mobile-nav.svg');
   background-repeat: no-repeat;
   background-position: bottom left;
   background-size: contain;
+   overflow: hidden;
+  &--active {
+    height: 100%;
+  }
+  @include media-query(large) {
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    // border: 1px solid black;
+    max-width: 80rem;
+    margin: 0 auto;
+    position: relative;
+  }
 
   &__container-top {
     width: 100%;
@@ -23,31 +39,60 @@
     align-items: center;
     padding: 1rem 1rem;
     background: white;
+    @include media-query(large) {
+      position: relative;
+      max-width: 12.5rem;
+      //margin: 0 auto;
+      //justify-self: center;
+    }
   }
 }
 .nav {
   padding: 5rem 1rem 0 1rem;
   text-align: center;
-  transition: 0.5s ease-in-out;
+  height: 100%;
   font-weight: 400;
   font-size: 1.2rem;
   line-height: 2rem;
+  position: relative;
+  top: 10%;
+  //transition: 0.5s ease-in-out;
+  @include media-query(large) {
+    padding: 0 1rem 0 1rem;
+  }
+
   &--open {
     transition: 0.5s ease-in-out;
+    @include media-query(large) {
+      display: none;
+    }
   }
   &--close {
     display: none;
     transition: 0.5s ease-in-out;
+    @include media-query(large) {
+      display: none;
+    }
   }
 
   &__list {
     padding-left: 0;
+    @include media-query(large) {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 2rem;
+    }
   }
   &__link {
     text-decoration: none;
     color: rgb(255, 255, 255);
     text-transform: uppercase;
     margin: 1rem 0;
+    font-weight: 600;
+    @include media-query(large) {
+      color: $clr-primary-grayish-blue;
+    }
   }
   &__item {
     padding: 0.5rem 0;
@@ -59,4 +104,12 @@
   background: $clr-primary-dark-violet;
   border: 1px solid white;
   margin: 1rem 0;
+  @include media-query(large) {
+    background: white;
+    border: 1px solid black;
+    padding: 0.5rem 1.5rem;
+    &-text {
+      color: black;
+    }
+  }
 }

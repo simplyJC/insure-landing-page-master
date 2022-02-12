@@ -1,6 +1,44 @@
 @use '../abstracts/' as *; 
+@use  '../base/' as *;
 
 
 .hero{
-    padding: 6rem 1rem 1rem 1rem;
+    padding: 4rem 0 4rem 0;
+    background: url('/images/bg-pattern-intro-left-mobile.svg') no-repeat , $clr-primary-dark-violet  ;
+    background-position:bottom 20rem left;
+    position: relative;
+    &::after{
+        content: url(/images/bg-pattern-intro-right-mobile.svg);
+        position: absolute;
+        right: 0;
+        bottom: -12.5rem;
+      
+    }
+
+
+    &__image{
+        width: 100%;
+    }
+    &__content{
+        padding: 3rem 1rem 1rem 1rem;
+        color: white;
+    }
+    &__title{
+        font-family: $ff-primary-dm-serif;
+        font-weight: 400;
+        font-size: 3rem;
+        text-align: center;
+    }
+    &__description{
+        text-align: center;
+        padding: 1rem 1rem; 
+    }
+    &__button{
+        text-align: center;
+        margin: 0 auto;
+        color: white;
+        display: block;
+        padding: .5rem 1.5rem;
+    }
+    
 }
