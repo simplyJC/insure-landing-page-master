@@ -1,44 +1,97 @@
-@use '../abstracts/' as *; 
-@use  '../base/' as *;
+@use '../abstracts/' as *;
+@use '../base/' as *;
 
+.hero {
+  padding: 4rem 0 4rem 0;
+  background: url('/images/bg-pattern-intro-left-mobile.svg') no-repeat,
+    $clr-primary-dark-violet;
+  background-position: bottom 20rem left;
+  position: relative;
+  text-align: center;
+  &::after {
+    content: url('/images/bg-pattern-intro-right-mobile.svg');
+    position: absolute;
+    right: 0;
+    bottom: -12.5rem;
+    @include media-query(large) {
+      content: url('/images/bg-pattern-intro-right-desktop.svg');
+      right: 0;
+      bottom: 4rem;
+    }
+  }
+  &__container {
+    @include media-query(large) {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      max-width: 80rem;
+      margin: 0 auto;
+    }
+  }
+  @include media-query(large) {
+    background: $clr-primary-dark-violet;
+    background-position: top right;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+    text-align: left;
+    &::before {
+      content: url('/images/bg-pattern-intro-left-desktop.svg');
+      position: absolute;
+      left: 0;
+      bottom: -15rem;
+    }
+    &__line {
+      height: 1px;
+      width: 8rem;
+      background-color: lighten($clr-neutral-grayish-violet, 20%);
+      margin: 0 auto;
+      transform: translate(-15rem, -3rem);
+    }
+  }
 
-.hero{
-    padding: 4rem 0 4rem 0;
-    background: url('/images/bg-pattern-intro-left-mobile.svg') no-repeat , $clr-primary-dark-violet  ;
-    background-position:bottom 20rem left;
-    position: relative;
-    &::after{
-        content: url(/images/bg-pattern-intro-right-mobile.svg);
-        position: absolute;
-        right: 0;
-        bottom: -12.5rem;
-      
+  &__image {
+    width: 100%;
+    @include media-query(large) {
+      padding: 1rem;
+      transform: translateY(8rem);
     }
 
-
-    &__image{
-        width: 100%;
+    & img {
+      margin: 0 auto;
     }
-    &__content{
-        padding: 3rem 1rem 1rem 1rem;
-        color: white;
+  }
+  &__content {
+    padding: 3rem 1rem 1rem 1rem;
+    color: white;
+    @include media-query(large) {
+      padding: 0;
     }
-    &__title{
-        font-family: $ff-primary-dm-serif;
-        font-weight: 400;
-        font-size: 3rem;
-        text-align: center;
+  }
+  &__title {
+    font-family: $ff-primary-dm-serif;
+    font-weight: 400;
+    font-size: 3rem;
+    @include media-query(large) {
+      padding: 0 1rem;
+      font-size: 4rem;
     }
-    &__description{
-        text-align: center;
-        padding: 1rem 1rem; 
+  }
+  &__description {
+    padding: 1rem 1rem;
+  }
+  &__button {
+    margin: 0 auto;
+    color: white;
+    display: block;
+    padding: 0.5rem 2rem;
+    @include media-query(large) {
+      margin: 0.5rem 1rem;
+      color: white;
+      background: $clr-primary-dark-violet;
+      border: 1px solid white;
     }
-    &__button{
-        text-align: center;
-        margin: 0 auto;
-        color: white;
-        display: block;
-        padding: .5rem 1.5rem;
-    }
-    
+  }
 }

@@ -16,7 +16,7 @@ navClose.addEventListener('click', () => {
 
 window.addEventListener('resize', () => {
   let viewportWidth = window.innerWidth;
-  if (viewportWidth >= 800 ) {
+  if (viewportWidth >= 900 ) {
     navClose.style.display = 'none';
     navOpen.style.display = 'none';
   }else{
