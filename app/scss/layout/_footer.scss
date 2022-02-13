@@ -49,6 +49,9 @@
   &__social-media-icon {
     color: $clr-neutral-grayish-violet;
     padding: 0 0.5rem;
+    &:hover{
+      
+    }
   }
   &__links {
     text-transform: uppercase;
